@@ -12,7 +12,6 @@ function App() {
     <>
       <Router>
         <Navbar />
-        rjdvhnld
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/sign-up' component={SignUp} />
