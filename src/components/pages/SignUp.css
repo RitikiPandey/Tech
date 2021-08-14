@@ -3,19 +3,20 @@
     padding: 0;
 }
 
-.container{
+.whole-container{
     position: relative;
     top: -80%;
-    width: 100%;
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    width: 100%;
 }
 
 .first-Container{
     width: 50%;
     background:#111;
     z-index: 0;
+    height: 100vh;
 }
 
 
@@ -41,7 +42,7 @@ i{
 
 
 .box{
-    width: 70%;
+    width: 130%;
     margin: 12px 0px;
     border-bottom: 2px solid black;
 }
@@ -78,7 +79,7 @@ div>p{
 
 .row{
     position: relative;
-    width: 100%;
+    width: 720px;
     display: flex;
     padding: 10px 0;
     white-space: nowrap;
@@ -101,10 +102,10 @@ div>p{
 @keyframes animate1
 {
     0%{
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
     100%{
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     }
 }
 @keyframes animate2
@@ -130,10 +131,10 @@ div>p{
 @keyframes animate3
 {
     0%{
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     }
     100%{
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
 }
 @keyframes animate4
@@ -144,5 +145,19 @@ div>p{
     100%{
         transform: translateX(0);
     }
+}
+
+@media screen and (max-width: 960px){
+    .whole-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .first-Container{
+        display: none;
+    }
+    .second-container{
+        width: 100%;
+        padding-bottom: 25px;
+    } 
 }
 

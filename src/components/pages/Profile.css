@@ -4,14 +4,16 @@
     box-sizing: border-box;
 }
 
-.container{
+.whole-container{
     display: flex;
     justify-content: center;
     align-items: center;
     background: #111;
+    height: 100vh;
+    width: 100%;
 }
 
-.card{
+.card1{
     position: relative;
     width: 350px;
     height: 450px;
@@ -44,7 +46,7 @@
     object-fit: cover;
 }
 
-.card:hover .imgBx{
+.card1:hover .imgBx{
     transform: translateY(30px) scale(0.5);
 }
 
@@ -58,14 +60,7 @@
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 30px;
-    /* transform: translateY(100%);
-    transition: 0.5s; */
 }
-
-/* .cards:hover .content{
-    transform: translateY(0);
-} */
-
 .details{
     display: flex;
     justify-content: center;

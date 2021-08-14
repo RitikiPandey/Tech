@@ -2,9 +2,11 @@
     --primary:#fff;
 }
 
-.btn{
+.btnn{
     padding: 8px 20px;
-    margin: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 2px;
     outline: none;
     border: none;

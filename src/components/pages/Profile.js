@@ -1,13 +1,33 @@
-import React from 'react';
+import React, { useState }from 'react';
 import '../../App.css';
 import './Profile.css'
+import { Button } from "react-bootstrap"
+import { useAuth } from '../../contexts/AuthContext'
+import { useHistory } from "react-router-dom"
 
 
 export default function Profile() {
+    const [error, setError] = useState("")
+    const { logout } = useAuth()
+    const history = useHistory()
+
+    async function handleLogout(){
+        setError('')
+
+        try{
+            await logout()
+            history.push('/login')
+
+        }catch{
+            setError('Failed to Log Out')
+        }
+    }
+
+
     return (
         <>
-        <div className="container">
-            <div className="card">
+        <div className="whole-container">
+            <div className="card1">
                   <div className="imgBx">
                       <img src="../images/bot.jpg" />
                   </div>
@@ -23,6 +43,7 @@ export default function Profile() {
                       </div>
                   </div>
             </div>
+            <Button variant = "link" onClick = {handleLogout}>Log Out</Button>
         </div>
         </>
     )

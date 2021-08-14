@@ -14,7 +14,7 @@ export const Button = ({ children, type, onClick, buttonStyle, buttonSize }) => 
     return (
         <>
             <Link to='/sign-up' className='btn-mobile'>
-                <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>{children}</button>
+                <button className={`btnn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>{children}</button>
             </Link>
             
         </>
@@ -29,7 +29,7 @@ export const Button1 = ({ children, type, onClick, buttonStyle, buttonSize }) =>
     return (
         <>
             <Link to='/login' className='btn-mobile'>
-                <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>{children}</button>
+                <button className={`btnn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>{children}</button>
             </Link>
             
         </>
@@ -44,7 +44,7 @@ export const Button2 = ({ children, type, onClick, buttonStyle, buttonSize }) =>
     return (
         <>
             <Link to='/profile' className='btn-mobile'>
-                <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>{children}</button>
+                <button className={`btnn ${checkButtonStyle} ${checkButtonSize}`} disabled="loading" onClick={onClick} type="submit">{children}</button>
             </Link>
             
         </>
